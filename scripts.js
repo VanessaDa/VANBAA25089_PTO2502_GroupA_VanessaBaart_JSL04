@@ -66,4 +66,14 @@ function openModal(taskId) {
     renderTasks();
   };
 }
+/**
+ * Updates the task object based on modal input values.
+ * @param {number} taskId - ID of the task to update.
+ */
+function updateTask(taskId) {
+  const task = initialTasks.find(t => t.id === taskId);
+  task.title = document.getElementById("modal-title").value;
+  task.description = document.getElementById("modal-desc").value;
+  task.status = document.getElementById("modal-status").value;
+}
 
