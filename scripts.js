@@ -83,5 +83,11 @@ function closeModal() {
   document.getElementById("task-modal").classList.add("hidden");
   document.getElementById("modal-backdrop").classList.add("hidden");
 }
+// Attach event listeners to modal close triggers
+document.getElementById("close-btn").onclick = closeModal;
+document.getElementById("modal-backdrop").onclick = closeModal;
+
+// Initial rendering of tasks after DOM content is loaded
+document.addEventListener("DOMContentLoaded", renderTasks);
 
 
