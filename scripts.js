@@ -76,4 +76,12 @@ function updateTask(taskId) {
   task.description = document.getElementById("modal-desc").value;
   task.status = document.getElementById("modal-status").value;
 }
+/**
+ * Closes the task detail modal and the backdrop overlay.
+ */
+function closeModal() {
+  document.getElementById("task-modal").classList.add("hidden");
+  document.getElementById("modal-backdrop").classList.add("hidden");
+}
+
 
