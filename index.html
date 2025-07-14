@@ -1,51 +1,35 @@
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon.svg"
-    />
-    <script defer src="./scripts.js"></script>
-    <title>Kanban Task Management</title>
-  </head>
-
-  <body>
-    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav class="side-bar" id="side-bar-div">
-      <div id="side-logo-div">
-        <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
-      </div>
-
-      <div class="boards-nav-links-div" id="boards-nav-links-div">
-        <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
-        <button class="board-btn">Launch Career</button>
-      </div>
-    </nav>
-
-    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
-    <div id="layout">
-      <header id="header" class="sticky-header">
-        <div class="header-name-div">
-          <img
-            src="./assets/favicon.svg"
-            alt="logo-mobile"
-            class="logo-mobile"
-          />
-          <h2 class="header-board-name" id="header-board-name">
-            Launch Career
-          </h2>
-        </div>
-      </header>
- <div class="container">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1" name="viewport"/>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+      <link href="./styles.css" rel="stylesheet"/>
+      <link href="./assets/favicon.svg" rel="icon" sizes="32x32" type="image/png"/>
+      <script defer="" src="./scripts.js"></script>
+      <title>Kanban Task Management</title>
+   </head>
+   <body>
+      <!-- Sidebar -->
+      <nav class="side-bar" id="side-bar-div">
+         <div id="side-logo-div">
+            <img alt="logo-light" id="logo" src="./assets/logo-light.svg"/>
+         </div>
+         <div class="boards-nav-links-div" id="boards-nav-links-div">
+            <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
+            <button class="board-btn">Launch Career</button>
+         </div>
+      </nav>
+      <!-- Main Layout -->
+      <div id="layout">
+         <header class="sticky-header" id="header">
+            <div class="header-name-div">
+               <img alt="logo-mobile" class="logo-mobile" src="./assets/favicon.svg"/>
+               <h2 class="header-board-name" id="header-board-name">Launch Career</h2>
+            </div>
+         </header>
+         <div class="container">
             <main class="card-column-main">
                <!-- Columns: To Do / Doing / Done -->
                <div class="column-div" data-status="todo">
@@ -71,8 +55,8 @@
                </div>
             </main>
          </div>
-      </div>    
-    <!-- Modal Structure -->
+      </div>
+      <!-- Modal Structure -->
       <div class="backdrop hidden" id="modal-backdrop"></div>
       <div class="modal hidden" id="task-modal">
          <div class="modal-content">
@@ -93,5 +77,5 @@
             </div>
          </div>
       </div>
-  </body>
+   </body>
 </html>
