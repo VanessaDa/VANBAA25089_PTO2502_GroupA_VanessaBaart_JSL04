@@ -1,50 +1,43 @@
-# 📌 Kanban Board – Launch Career Edition
+# 📌 JSL04 – Kanban Board: Dynamic Task Display & Modal View
 
-A browser-based task management system built with **vanilla JavaScript** that simulates a basic Kanban workflow. It enables users to add tasks, validate input, and view filtered results—all via browser prompts and console outputs.
+A responsive browser-based Kanban board built with **vanilla JavaScript**, dynamically rendering tasks to the DOM based on their status. Tasks are interactive — clicking a task opens a modal where users can view and edit details such as title, description, and status.
 
 ---
 
 ## 📝 Project Overview
 
-This project is part of the **CodeSpace Academy JavaScript curriculum**. It introduces students to:
-
-- Structuring data with objects and arrays
-- Handling real-time user input using `prompt()` and `alert()`
-- Implementing input validation through loops
-- Filtering tasks by status (`todo`, `doing`, `done`)
-- Writing clean, modular functions with clear purpose
-
-This version is a **console-driven** simulation of a Kanban board, ideal for building foundational logic before progressing to UI-based interfaces.
+This project is part of the **CodeSpace Academy JavaScript curriculum (JSL04 Challenge)**. It builds upon earlier logic-focused challenges to now include **DOM manipulation**, **event-driven interaction**, and **responsive UI design**. Students deepen their understanding of JavaScript by dynamically generating HTML content and linking it with modal interactions — all without using any external libraries or frameworks.
 
 ---
 
 ## 🛠 Technologies Used
 
-- **HTML5** – Basic document setup
-- **CSS3** – Minimal layout and branding
-- **JavaScript (ES6+)** – Logic, array manipulation, user interaction
+- **HTML5** – Semantic structure and layout
+- **CSS3** – Responsive and Figma-aligned styling
+- **JavaScript (ES6+)** – DOM manipulation, modular functions, event handling
 
 ---
 
 ## ✅ Features
 
-- Tasks are stored as structured objects in an array
-- Add up to **3 new tasks** using `prompt()`
-- Each new task gets a unique, auto-incremented ID
-- Input validation restricts `status` to: `todo`, `doing`, or `done`
-- Console logs show:
-  - 📋 **All Tasks**
-  - ✅ **Completed Tasks** (where `status === "done"`)
-- User is alerted when the maximum of 9 tasks is reached
-- Clean modular functions handle adding, validating, and filtering
+- Dynamically renders tasks from a predefined array to the DOM
+- Auto-sorts tasks into correct Kanban columns: `To Do`, `Doing`, `Done`
+- Clickable task cards open a modal with:
+  - Editable input fields for title and description
+  - A dropdown to change task status
+- Fully functional Save and Close modal buttons
+- Responsive layout for desktop and mobile
+- Clean, modular JavaScript code with single-responsibility functions
+- Modal backdrop ensures user focus and accessibility
 
 ---
 
 ## 📦 File Structure
 
 ```
-├── index.html         # Basic HTML scaffold
-├── script.js          # Core JavaScript logic
+├── index.html         # HTML structure with Kanban layout and modal
+├── styles.css         # Styling: layout, columns, modal, responsive behavior
+├── scripts.js         # JavaScript: rendering logic, modal control, event handling
 └── README.md          # Project documentation
 ```
 
@@ -54,93 +47,76 @@ This version is a **console-driven** simulation of a Kanban board, ideal for bui
 
 1. **Clone or download** the repository:
 
-   ```bash
-   git clone https://github.com/VanessaDa/VANBAA25089_PTO2502_GroupA_VanessaBaart_JSL03-2025.git
-   ```
+```bash
+git clone https://github.com/VanessaDa/VANBAA25089_PTO2502_GroupA_VanessaBaart_JSL04.git
+```
 
-2. Open `index.html` in your browser.
+2. Open `index.html` in your preferred browser.
 
-3. Follow the prompts and open the **Developer Console** to view the results.
+3. Tasks will automatically appear under their corresponding status columns.
+
+4. Click on any task card to open the modal and view/edit task details.
 
 ---
 
 ## 💡 Usage Examples
 
-### ➕ Adding Tasks
-
-1. You'll be prompted to enter:
-   - `title`
-   - `description`
-   - `status` (`todo`, `doing`, or `done`)
-2. Invalid statuses will re-prompt until valid.
-3. Once 3 new tasks are added and the total hits 9, you'll see:
-   ```
-   There are enough tasks on your board, please check them in the console.
-   ```
-
-### 🧪 Example Console Output
+### 👀 Default Tasks
 
 ```js
-📋 All Tasks:
 [
-  { id: 1, title: "Gym", status: "todo" },
-  { id: 9, title: "Buy groceries", status: "done" }
-]
-
-✅ Completed Tasks:
-[
-  { id: 3, title: "Sleep", status: "done" },
-  { id: 9, title: "Buy groceries", status: "done" }
-]
+  { id: 1, title: "Launch Epic Career", status: "todo" },
+  { id: 2, title: "Master JavaScript", status: "doing" },
+  { id: 3, title: "Contribute to Open Source Projects", status: "done" },
+];
 ```
+
+### ✍️ Editing a Task
+
+1. Click a task like `"Master JavaScript"`.
+2. The modal opens with:
+   - Title: `Master JavaScript`
+   - Description: `Get comfortable with the fundamentals`
+   - Status: `doing`
+3. Edit fields and click **Save**.
+4. The updated task is re-rendered in its appropriate column.
 
 ---
 
-## 📋 Interaction Instructions
+## 🧩 Interaction Instructions
 
-- **Prompt-based input** only — no buttons or UI.
-- To use:
-  1. Open browser
-  2. Run `index.html`
-  3. Respond to input prompts
-  4. Open **Developer Console** to view:
-     - All Tasks
-     - Completed Tasks
+- No prompts or buttons outside of the modal.
+- Click task → Edit → Save → View changes in real-time.
+- Modal can be closed via the `✕` button or backdrop click.
 
 ---
 
-## ❌ Input Validation Example
+## 🖼 Responsive UI
 
-If user enters invalid status like `"completed"`:
-
-```
-Enter task status (todo, doing, done):
-> completed
-Invalid. Please try again.
-```
-
-Loop continues until a valid status is entered.
+- Grid layout for desktop (3 columns)
+- Adaptive layout for tablet (2 columns)
+- Single-column scroll view on mobile
+- Modal adapts to screen size with backdrop dimming
 
 ---
 
 ## 👩‍💻 Author
 
 **Vanessa Baart**  
-[GitHub](https://github.com/VanessaDa/VANBAA25089_PTO2502_GroupA_VanessaBaart_JSL04.git)  
+[GitHub](https://github.com/VanessaDa/VANBAA25089_PTO2502_GroupA_VanessaBaart_JSL04.git)
 [LinkedIn](https://www.linkedin.com/in/vanessa-gwama-50841ab7)
 
 ---
 
 ## 📎 Notes
 
-This solution is part of the **JSL03 Challenge** and supports key learning outcomes in:
+This solution fulfills all **JSL04 Challenge** requirements:
 
-- Arrays & objects
-- Input validation
-- Looping logic
-- Function reuse
-- Output structuring via console
+- Modular, maintainable JavaScript code
+- DOM interaction and real-time updates
+- Editable task modal with full styling
+- Responsive design matching provided Figma template
 
-> Ideal as a stepping stone to building full-featured UI task boards like JSL04.
+> Ideal stepping stone towards full CRUD-based task management systems.
 
 ---
