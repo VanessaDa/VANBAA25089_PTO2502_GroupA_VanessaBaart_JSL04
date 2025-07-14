@@ -43,3 +43,27 @@ function renderTasks() {
     containers[task.status].appendChild(taskElement);
   });
 }
+
+/**
+ * Opens the modal for editing a specific task.
+ * Populates modal fields with the task’s current title, description, and status.
+ * Sets up the save button to update task data and re-render the board.
+ * 
+ * @param {number} taskId - The ID of the task to be edited.
+ */
+function openModal(taskId) {
+  const task = initialTasks.find(t => t.id === taskId);
+  document.getElementById("modal-title").value = task.title;
+  document.getElementById("modal-desc").value = task.description;
+  document.getElementById("modal-status").value = task.status;
+
+  document.getElementById("task-modal").classList.remove("hidden");
+  document.getElementById("modal-backdrop").classList.remove("hidden");
+
+  document.getElementById("save-btn").onclick = () => {
+    updateTask(taskId);
+    closeModal();
+    renderTasks();
+  };
+}
+
