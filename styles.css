@@ -80,3 +80,28 @@ h4 {
   cursor: pointer;
   overflow: hidden; /* Prevents overflowed text/icons from showing */
 }
+/* ===============
+   Main Layout
+================ */
+#layout {
+  flex: 1; /* Fills remaining space beside sidebar */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+}
+
+/* ===============
+   Header Section
+================ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+  height: 96px;
+  padding: 0 35px 0 30px;
+  border-bottom: 1px solid #e4ebfa;
+  width: 100%;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
