@@ -35,9 +35,12 @@ This project is part of the **CodeSpace Academy JavaScript curriculum (JSL04 Cha
 ## 📦 File Structure
 
 ```
-├── index.html         # HTML structure with Kanban layout and modal
-├── styles.css         # Styling: layout, columns, modal, responsive behavior
-├── scripts.js         # JavaScript: rendering logic, modal control, event handling
+├── index.html         # Markup structure with Kanban layout and modal
+├── styles.css         # Styling: layout, modal, responsive rules
+├── scripts/
+│   ├── main.js        # Initializes board, attaches event listeners
+│   ├── modal.js       # Modal open/close logic, updates tasks
+│   └── tasks.js       # Task rendering and creation logic
 └── README.md          # Project documentation
 ```
 
